@@ -147,7 +147,7 @@ body {
   align-items: center;
 }
 
-.active,
+.active.link,
 .header .link:hover,
 .header .link:focus {
   color: var(--accent-color);
@@ -355,7 +355,7 @@ body {
 .backdrop.is-hidden {
   pointer-events: none;
   opacity: 0;
-  visibility: hidden;  /* незрозуміла необхідність visibility, якщо вже є opacity */
+  visibility: hidden; /* незрозуміла необхідність visibility, якщо вже є opacity */
 }
 
 .modal {
@@ -495,6 +495,7 @@ body {
 
 .team .icon {
   fill: var(--greyish-background-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients .icon {
@@ -589,6 +590,10 @@ body {
 
 .projects .item {
   width: calc((100% - 2 * 30px) / 3);
+}
+
+.projects .link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects .link:hover,
